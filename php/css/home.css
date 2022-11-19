@@ -1,0 +1,151 @@
+
+/* start nav */
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: black;
+}
+.menu a{
+    margin-right: 10px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.menu a:hover{
+    color: rgb(65, 166, 255);
+    animation-delay: 1s;
+}
+.menu i{
+    font-size: xx-large;
+}
+.logo img{
+    width: 150px;
+    height: 50px;
+}
+.uil {
+    margin-right: 10px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+.menu a:hover{
+    color: rgb(65, 166, 255);
+    animation-delay: 1s;
+}
+.menu i{
+    font-size: xx-large;
+}
+.logo img{
+    width: 150px;
+    height: 50px;
+}
+.sign-box{
+
+    align-items: center;
+    position: fixed;
+    top: 12.7%;
+    width: 20%;
+    right:-200%;
+    height: 250px;
+    padding: 1%;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.active-box{
+    right:0.5%;
+}
+.signinform{
+    text-align: center;
+
+}
+
+.signinform p {
+    font-size: 70%;
+    line-height: 20px;
+}
+
+.signinform input{
+    margin-top: 20px;
+}
+
+.signinform .connect{
+    background-color: #2f5efa;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 3% 7%;
+}
+/* end navi */
+header{
+    padding-left: 5px;
+}
+h1, h3{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+h2, h4{
+    font-family: 'Open Sans', sans-serif;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+.cont{
+    width: 450px;
+    box-shadow: 10px 10px 10px 10px grey;
+    padding: 5px;
+    border-radius: 20px;
+}
+.club{
+    flex: 1;
+    padding-left: 10px;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.club p{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.container img{
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+} 
+
+/* footer */
+.footer {
+    background: black;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    margin-top: 40px;
+}
+.hm-footer-copyright p,.hm-footer-copyright p a {
+    color:black;
+    font-size: 14px;
+    font-weight: 400;
+}
+.footer-social a i {
+    color: white;
+    margin: 0 18px 24px 0;
+    -webkit-transition: .3s; 
+    -moz-transition:.3s; 
+    -ms-transition:.3s; 
+    -o-transition:.3s;
+    transition: .3s;
+    margin-top: 20px;
+}
+.footer p{
+    color: white;
+}
+.footer-social i:hover{
+    color:rgb(65, 166, 255) ;
+}
