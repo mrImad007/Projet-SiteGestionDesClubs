@@ -2,7 +2,14 @@
 $name = $_POST["clubName"];
 $desc = $_POST["clubDesc"];
 $mission = $_POST["clubMiss"];
-$category = 
+$category = $_POST["clubCatg"];
+
+$conn = new PDO("mysql:host=localhost;dbname=brief2;port=3306",'root','');
+
+$ins = "INSERT INTO `clubs` (`Name`, `Description`, `Mission`, `image`, `id`, `categorie`) VALUES ('?','?','?','?','?','?')";
+$del = "DELETE FROM `clubs` WHERE   "
+$exe = $conn->prepare($ins);
+$exe->execute();
 
 <div class="add" action="<?php echo $_SERVER['PHP_SELF'] ?>"method="post"">
                 <form action="#" method="post">
