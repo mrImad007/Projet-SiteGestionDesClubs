@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +30,7 @@
             <div class="signinform">
                 <h3>Sign in</h3>
                 <p>Log in to access your management account on Youcode Clubs</p>
+
             <form action="gestionClub.php" method="POST">
             <div class="inputboite">
                   <input type="text" name="name" placeholder="Username" />
@@ -41,6 +43,7 @@
                 </div>
               </div>
             </form>
+
         </div>
     </header>
     <!-- end navigation -->

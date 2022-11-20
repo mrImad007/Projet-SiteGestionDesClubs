@@ -1,16 +1,25 @@
 <?php
-    $pdo = new PDO("mysql:host=localhost;port=3306;dbname=brief2", 'root','');
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $name = $_POST['name'];
-    $password = $_POST['password'];
-    $query = "SELECT * FROM `admin` WHERE username = '$name' AND password = '$password'";
-    $stet = $pdo->prepare($query);
-    $stet->execute();
-    $user = $stet->fetchAll(PDO::FETCH_ASSOC);
-    if (!$user) {
-        header('Location: ./index.php');}
+    session_start();
+    if(!isset($_SESSION['username'])){
+        if(isset($_POST['name'])){
+            $pdo = new PDO("mysql:host=localhost;port=3306;dbname=brief2", 'root','');
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $name = $_POST['name'];
+            $password = $_POST['password'];
+            $query = "SELECT * FROM `admin` WHERE username = '$name' AND password = '$password'";
+            $stet = $pdo->prepare($query);
+            $stet->execute();
+            $user = $stet->fetchAll(PDO::FETCH_ASSOC);
+            if (!$user) {
+                header('Location: ./index.php');}
+            $_SESSION['username'] = $name;
+            }else{
+            header('Location: ./index.php');
+            }
+    }
     ?>
     
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +50,9 @@
         <header>
             <!-- club 1 -->
             <div class="addBtn">
+                <a href="addClub.php">
                 <button>Ajouter Club</button>
+                </a>
             </div>
             <div class="club">
                 <div class="img">
@@ -82,7 +93,11 @@
                 </div>
             </div><br><br>
             <!-- end content -->
-
+            <div>
+                <a href="logout.php">
+                    <button>log out</button>
+                </a>
+            </div>
             <!--/.footer-->
                 <footer id="footer"  class="footer">
                     <div class="container">
