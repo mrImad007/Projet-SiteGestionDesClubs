@@ -1,5 +1,3 @@
-
-
 <?php
     $pdo = new PDO("mysql:host=localhost;port=3306;dbname=brief2", 'root','');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -10,10 +8,9 @@
     $stet->execute();
     $user = $stet->fetchAll(PDO::FETCH_ASSOC);
     if (!$user) {
-        header('Location: ./index.php');
-    }
-?>
-
+        header('Location: ./index.php');}
+    ?>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,6 +40,9 @@
         <div class="title"><h1>Gestion des clubs</h1></div>
         <header>
             <!-- club 1 -->
+            <div class="addBtn">
+                <button>Ajouter Club</button>
+            </div>
             <div class="club">
                 <div class="img">
                     <img src="greenInvest.jpg" alt="#">
