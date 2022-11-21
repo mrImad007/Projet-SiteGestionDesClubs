@@ -18,6 +18,16 @@
     }
     ?>
     
+    <?php
+    $pdo = new PDO("mysql:host=localhost;dbname=brief2;port=3306",'root','');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $show = 'SELECT * FROM clubs ';
+    $sh=$pdo->prepare($show);
+    $sh->execute();
+
+    $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,45 +63,24 @@
                 <button>Ajouter Club</button>
                 </a>
             </div>
+            <?php foreach($clubs as $club) : ?>
             <div class="club">
                 <div class="img">
                     <img src="greenInvest.jpg" alt="#">
                 </div>
                 <div class="name">
-                    Club des Arts et métiers
+                <?php echo $club['Name'] ?>
                 </div>
                 <div class="btns">
                     <button class="mdfy">Modifier</button>
-                    <button class="dlt">Supprimer</button> 
+                    <form action="./delete.php" method="get">
+                        <input type="hidden" name="id" value="<?php echo $club['id']; ?>">
+                        <button type="submit" class="dlt">Supprimer</button> 
+
+                    </form>
                 </div>
             </div><br><br>
-            <!-- club 2 -->
-            <div class="club">
-                <div class="img">
-                    <img src="greenInvest.jpg" alt="#">
-                </div>
-                <div class="name">
-                    Club des Arts et métiers
-                </div>
-                <div class="btns">
-                    <button class="mdfy">Modifier</button>
-                    <button class="dlt">Supprimer</button>
-                </div>
-            </div><br><br>
-            <!-- club 3 -->
-            <div class="club">
-                <div class="img">
-                    <img src="greenInvest.jpg" alt="#">
-                </div>
-                <div class="name">
-                    Club des Arts et métiers
-                </div>
-                <div class="btns">
-                    <button class="mdfy">Modifier</button>
-                    <button class="dlt">Supprimer</button>
-                </div>
-            </div><br><br>
-            <!-- end content -->
+            <?php endforeach; ?>
             <div>
                 <a href="logout.php">
                     <button>log out</button>
