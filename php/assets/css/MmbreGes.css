@@ -1,4 +1,11 @@
+*{
+    font-family: sans-serif;
+}
+
 /* start nav */
+body{
+    margin: 0px;  
+}
 .nav{
     display: flex;
     justify-content: space-between;
@@ -6,10 +13,14 @@
     height: 70px;
     background-color: black;
 }
+.nav .menu{
+    padding-right: 5% !important;
+}
 .menu a{
     margin-right: 10px;
     color: white;
-    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+
 }
 .menu a:hover{
     color: rgb(65, 166, 255);

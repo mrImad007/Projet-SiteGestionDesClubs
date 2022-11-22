@@ -1,4 +1,11 @@
+*{
+    font-family: sans-serif;
+}
+
 /* start nav */
+body{
+    margin: 0px;  
+}
 .nav{
     display: flex;
     justify-content: space-between;
@@ -9,7 +16,7 @@
 .menu a{
     margin-right: 10px;
     color: white;
-    font-family: 'Open Sans', sans-serif;
+
 }
 .menu a:hover{
     color: rgb(65, 166, 255);
@@ -47,7 +54,7 @@ input{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'poppins' , sans-serif;
+
     scroll-behavior: smooth;
 }
 
@@ -169,11 +176,14 @@ header a{
 
 /* footer */
 .footer {
-    background: black;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    height: 50px;
     text-align: center;
-    height: 100px;
-    width: 100%;
-    margin-top: 40px;
+    padding-top: 5px;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
 }
 .hm-footer-copyright p,.hm-footer-copyright p a {
     color:black;

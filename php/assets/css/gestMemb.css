@@ -1,0 +1,143 @@
+*{
+    font-family:sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+/* start nav */
+body{
+    /* margin: 0px;   */
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: black;
+    box-shadow: 10px 5px 10px rgb(0,0,0,0.3);
+    border-radius: 5px;
+}
+.menu{
+    width: 30%;
+    text-align: center;
+}
+.menu .menb {
+    margin-right: 20px;
+}
+.uil {
+    margin-right: 10px;
+    color: white;
+
+    cursor: pointer;
+}
+.menu a:hover{
+    color: rgb(65, 166, 255);
+    animation-delay: 1s;
+}
+.menu a{
+    /* margin-right: 10px; */
+    
+    color: white;
+    font-family: sans-serif;
+    padding-left: 8%;
+    text-decoration: none;
+}
+.menu i{
+    font-size: xx-large;
+}
+.logo img{
+    width: 150px;
+    height: 50px;
+}
+.btnlog{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(47, 113, 254);
+    border: none;
+    border-radius: 2px;
+    margin-right: 15px;
+    padding: 7px 15px;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin: 30px;
+}
+.cont-box{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.cont-box img{
+    margin-top: 10%;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+}
+
+.cont-box p{
+    margin: 5% 0 5% 0;
+}
+.cont-box h5{
+    margin-top: 5%;
+}
+
+.box-name,
+.box-age,
+.box-club{
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width: 60%;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+.crud-btn button{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(47, 113, 254);
+    border: none;
+    border-radius: 2px;
+    margin-right: 15px;
+    padding: 7px 15px;
+}
+
+
+
+
+
+
+
+
+/* footer */
+.footer{
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: center;
+    padding-top: 5px;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+
+  }
+  .footer a{
+    color: rgb(65, 166, 255);
+    text-decoration: none;
+   
+
+  }
+  .copyright{
+    margin-top: 10px;
+    margin-left: 30px;
+  }

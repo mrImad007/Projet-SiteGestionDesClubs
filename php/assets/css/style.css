@@ -1,49 +1,46 @@
-/* *{
-    font-family: monospace;
-    transition: all 200ms ease-in-out;
-    margin: 0;
-    padding: 0;
-} */
-body{
-    background-color: rgba(220,220,220, 0.1);
+*{
+  font-family: sans-serif;
 }
-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 40px;
-    width: 100%;
+
+body{
+  margin: 0px;  
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: black;
+  box-shadow: 10px 5px 10px rgb(0,0,0,0.3);
+  border-radius: 5px;
+}
+.menu{
+  width: 30%;
+  text-align: center;
+}
+.menu a{
+  /* margin-right: 10px; */
+  
+  color: white;
+  font-family: sans-serif;
+  padding-left: 8%;
+  text-decoration: none;
+}
+.menu .menb{
+  margin-right: 20px;
+}
+.menu a:hover{
+  color: rgb(65, 166, 255);
+  animation-delay: 1s;
+}
+.menu i{
+  font-size: xx-large;
 }
 .logo img{
-    width: 100px;
-    height: 80px;
+  width: 150px;
+  height: 50px;
 }
-.nav{
-    display: inline-block;
-}
-header a:hover{
-   color: #0384EE;
-}
-header a{
-    color: #000000;
- }
-.nav a{
-    text-decoration: none;
-    margin: 10px;
-    font-size: 18px;
-    color: black;
-}
-.nav a:hover{
-    color: #0384EE
-}
-.test{
-  display: none;
-} 
-.test nav{
-    display: flex;
-    flex-direction: column;
-    height: 0;
-  }
 .search{
   height: 40vh;
   display: flex;
@@ -58,7 +55,6 @@ h1{
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-family: monospace;
   font-size: 20px;
   background-color: transparent;
   margin-bottom: 40px;
@@ -376,11 +372,14 @@ td{
 
     /* footer */
 .footer {
-  background: black;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  height: 50px;
   text-align: center;
-  height: 100px;
-  width: 100%;
-  margin-top: 40px;
+  padding-top: 5px;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 100px;
 }
 .hm-footer-copyright p,.hm-footer-copyright p a {
   color:black;
@@ -415,7 +414,6 @@ td{
 .menu a{
   margin-right: 10px;
   color: white;
-  font-family: 'Open Sans', sans-serif;
 }
 .menu a:hover{
   color: rgb(65, 166, 255);

@@ -1,0 +1,120 @@
+*{
+    font-family: sans-serif;
+}
+
+body{
+
+    margin: 0px;  
+    
+    background-image: url("https://scontent.fcmn1-2.fna.fbcdn.net/v/t39.30808-6/308943555_209130704802505_2484629517799509470_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=rQAuHacI6egAX_GKl60&_nc_ht=scontent.fcmn1-2.fna&oh=00_AfC4NSJt02NWf4KJ9zvYE2csBICO9BUpLSz-Qtg6_kZKjA&oe=63811EC3");
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: black;
+    box-shadow: 10px 5px 10px rgb(0,0,0,0.3);
+    border-radius: 5px;
+}
+.menu{
+    width: 30%;
+    text-align: center;
+}
+.menu a{
+    /* margin-right: 10px; */
+    
+    color: white;
+    padding-left: 8%;
+    text-decoration: none;
+}
+.menu .menb{
+    margin-right: 20px;
+}
+.menu a:hover{
+    color: rgb(65, 166, 255);
+    animation-delay: 1s;
+}
+.menu i{
+    font-size: xx-large;
+}
+.logo img{
+    width: 150px;
+    height: 50px;
+}
+.btnlog{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(47, 113, 254);
+    border: none;
+    border-radius: 2px;
+    margin-right: 15px;
+    padding: 7px 15px;
+}
+h2{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: center;
+    width: 50%;
+    height: 550px;
+    margin: 0 0 10% 25%;
+    
+    background-color: #ffffffd0;
+    box-shadow: 1px 1px 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+input{
+    width: 45%;
+    height: 20px;
+}
+textarea{
+    width: 45%;
+    height: 150px;
+    resize: none;
+}
+
+button{
+   
+        cursor: pointer;
+        color: white;
+        background-color: rgb(47, 113, 254);
+        border: none;
+        border-radius: 2px;
+        margin-right: 15px;
+        padding: 7px 25px;
+
+}
+
+
+
+
+
+.footer{
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: center;
+    padding-top: 5px;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+
+  }
+  .footer a{
+    color: rgb(65, 166, 255);
+    text-decoration: none;
+   
+
+  }
+  .copyright{
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+
