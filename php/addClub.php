@@ -58,8 +58,9 @@ $name = $_POST['clubName'];
 $desc = $_POST['clubDesc'];
 $mission = $_POST['clubMiss'];
 $category = $_POST['clubCatg'];
+$img = $_POST['img'];
 
-$ins = "INSERT INTO `clubs` (`Name`, `Description`, `Mission`, `image`, `categorie`) VALUES ('$name','$desc','$mission','','$category')";
+$ins = "INSERT INTO `clubs` (`Name`, `Description`, `Mission`, `image`, `categorie`) VALUES ('$name','$desc','$mission','$img','$category')";
 $exe = $pdo->prepare($ins);
 $exe->execute();
 

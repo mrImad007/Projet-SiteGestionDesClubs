@@ -44,10 +44,10 @@ $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
                 <h3>Sign in</h3>
                 <p>Log in to access your management account on Youcode Clubs</p>
                 <div class="inputboite">
-                    <input type="text" name="username" placeholder="Username" />
+                    <input type="text" name="user" placeholder="Username"  />
                 </div>
                 <div class="inputboite">
-                    <input type="password" name="password" placeholder="Password" />
+                    <input type="password" name="pass" placeholder="Password" require />
                 </div>
                 <div class="inputboite connect-btn">
                     <button class="connect">Connect</button>
@@ -76,64 +76,28 @@ $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
             </div>
 
             <div class="container">
+                <?php foreach($clubs as $club) : ?>
                 <!-- club 1 -->
                 <div class="club">
-                    <div class="cont">
+                    <div class="cont" style="width: 400px;">
                         <div class="img">
-                            <img src="./images/greenInvest.jpg" alt="#">
+                            <img src="<?php echo $club['image'];?>" alt="#">
                         </div>
                         <div class="description">
-                            <h3>Club des Arts et Métiers</h3>
+                            <h3><?php echo $club['Name'];?></h3>
                             <h4>Presentation</h4>
-                            <p>L’objectif l’association Sportive YouCode est de participer aux différentes activités parascolaires à l'école et il a un plan d’action bien défini qui s’inscrit dans une démarche globale d’éducation au sport qui vient s’allier à la vocation pédagogique de l’école.
-                            <p>YouCode dispose des équipements pour toutes les disciplines sportives masculines et féminines. la chose qui permet de bien veiller à l’organisation de ses activités et à participer aux différents championnats universitaires régionaux et nationaux.</p>
+                            <p>
+                            <?php echo $club['Description'];?>
+                            </p>
                             <h4>Missions</h4>
                             <ul class="tasks">
-                                <li>Organiser tout au long de l’année des événements sur différents thèmes sociaux au profit de différents bénéficiaires</li>
-                                <li>Participer à des événements de marque à travers ses délégations d’étudiants, pour une simple assistance ou une implication dans l’organisation</li>
+                                <li><?php echo $club['Mission'];?></li>
+                                
                             </ul>
                         </div>
                     </div>
                 </div>
-                <!-- club 2 -->
-                <div class="club">
-                    <div class="cont">
-                        <div class="img">
-                            <img src="./images/greenInvest.jpg" alt="#">
-                        </div>
-                        <div class="description">
-                            <h3>l'Association sportive Youcode</h3>
-                            <h4>Presentation</h4>
-                            <p>l'Association des Arts et Métiers (ADAM) est une association à but non lucratif à vocation artistique qui a pour objet l'encadrement et le perfectionnement des activités artistiques, elle siège à YouCode. </p>
-                            <p>L'Association des arts et métiers est composée d'ateliers qui sont à la disposition des étudiants de l'école : Ateliers musique et chant, danse, design, théâtre, photographie, infographie….
-                                C'est ainsi que l'ADAM offre à ses membres l'opportunité de joindre l'utile à l'agréable, en accompagnant ses artistes en herbe dans leur épanouissement artistique, et en offrant aux futurs managers la possibilité de mettre en pratique leur acquis.</p>
-                            <h4>Missions</h4>
-                            <ul class="tasks">
-                                <li>Organiser tout au long de l’année des événements sur différents thèmes sociaux au profit de différents bénéficiaires</li>
-                                <li>Participer à des événements de marque à travers ses délégations d’étudiants, pour une simple assistance ou une implication dans l’organisation</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- club 3 -->
-                <div class="club">
-                    <div class="cont">
-                        <div class="img">
-                            <img src="./images/greenInvest.jpg" alt="#">
-                        </div>
-                        <div class="description">
-                            <h3>Club culture</h3>
-                            <h4>Presentation</h4>
-                            <p>Appelé aussi le CDA, le Club de promotion et de Parrainage a été créé en 2022. Il est parmi les meilleurs clubs à chapeauter le réseau de l'ecole au travers le parascolaire dont elle dispose. C’est le club qui se voit confier le drapeau de l’école.</p>
-                            <p>Le est le club qui vous a accueilli aux différents forums nationaux et internationaux tout au long de l’année en représentant l’école Youcode, bien avant que vous sachiez quel chemin vous allez suivre après l’obtention de votre baccalauréat.</p>
-                            <h4>Missions</h4>
-                            <ul class="tasks">
-                                <li>Organiser tout au long de l’année des événements sur différents thèmes sociaux au profit de différents bénéficiaires</li>
-                                <li>Participer à des événements de marque à travers ses délégations d’étudiants, pour une simple assistance ou une implication dans l’organisation</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach;?>
             </div>
         </div>
     </section>

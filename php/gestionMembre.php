@@ -1,6 +1,11 @@
 <?php
+    session_start();
+    if(!isset($_SESSION['user'])){
+        header('Location: ./index.php');
+    }
+?>
 
-session_start();
+<?php
 
 $pdo = new PDO("mysql:host=localhost;port=3306;dbname=brief2", 'root','');
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -57,7 +62,7 @@ $pdo = new PDO("mysql:host=localhost;port=3306;dbname=brief2", 'root','');
                         <h5>Club </h5>
                         <p class="club"><?php echo $membre['club']; ?></p>
                     </div>
-                    <div class="crud-btn">
+                    <div class="crud-btn" style="display: flex;">
                         
                         <form action="./mdfMembre.php" method="get">
                             <input type="hidden" name="id" value="<?php echo $membre['id']; ?>">
