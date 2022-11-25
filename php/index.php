@@ -79,7 +79,7 @@ $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
                 <?php foreach($clubs as $club) : ?>
                 <!-- club 1 -->
                 <div class="club">
-                    <div class="cont" style="width: 400px;">
+                    <div class="cont">
                         <div class="img">
                             <img src="<?php echo $club['image'];?>" alt="#">
                         </div>
