@@ -53,8 +53,6 @@ $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
                     <button class="connect">Connect</button>
                 </div>
             </div>
-
-
         </form>
     </header>
     <!-- end navigation -->
