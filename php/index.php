@@ -34,6 +34,8 @@ $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
                 </a>
             </div>
             <div class="menu">
+                <a href="gestionClub.php">Clubs</a>
+                <a class="menb" href="gestionMembre.php">Membres</a>
                 <!-- <a href="index.html">Home</a> -->
                 <i class="uil uil-signin"></i>
             </div>
@@ -102,7 +104,7 @@ $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
     <!--/.footer-->
     <footer id="footer" class="footer">
         <div class="copyright">
-            <p>Copyright 2022 <a href="#"> Karim Cherraoui - Imad Eddine ZAOUI </a>YouCode Student. Tous droits reservé</p>
+            <p>Copyright 2022 <a href="https://www.linkedin.com/in/imad-eddine-zaoui-a2ab95246/">Imad Eddine ZAOUI </a>YouCode Student. Tous droits reservés</p>
         </div>
     </footer>
 

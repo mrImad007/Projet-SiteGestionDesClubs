@@ -13,10 +13,12 @@ if(!isset($_SESSION['user'])){
     $user = $stet->fetchAll(PDO::FETCH_ASSOC);
     
     if (!$user){
-      header('Location: ./index.php'); 
+      header('Location: ./index.php');
+      echo '<script>alert("Les données entrées sont fausses.")</script>'; 
     }
     else{
       $_SESSION['user'] = $name;
+      echo '<script>alert("Welcome you are loged in.")</script>';
     }
   }
 }

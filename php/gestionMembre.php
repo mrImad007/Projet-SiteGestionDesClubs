@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('Location: ./isLoged.php');
+    include('./isLoged.php');
 ?>
 
 <?php
@@ -22,27 +22,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/gestMemb.css">
-    <title>Document</title>
+    <title>Gestion des Membres</title>
 </head>
 <body>
         <!-- start navigation -->
         <div class="nav">
             <div class="logo">
-                <a href="index.html" style="color: black;">
+                <a href="index.php" style="color: black;">
                 <img src="./images/logo.png" alt="logo">
             </a>
             </div>
             <div class="menu">
                 <a href="gestionClub.php">Clubs</a>
                 <a class="menb" href="gestionMembre.php">Membres</a>
-                <a href="./logOut.php">
+                <a href="./logout.php">
                 <button class="btnlog" type = "submit" >Déconnecter</button>
                 </a>
             </div>
-        </div><br>
+        </div><br><br>
         <!-- end navigation -->
+        <div class="title">
+            <h1>Gestion des membres</h1>
+        </div><br>
+        <div class="addMembre">
+            <a href="./addMember.php">
+            <button>Ajouter un membre</button>
+            </a>
+        </div><br><br>
 <section>
 <?php foreach($membres as $membre): ?>
+
     <div class="boxes">
         <div class="box">
                 <div class="cont-box">
@@ -59,7 +68,7 @@
                         <h5>Club </h5>
                         <p class="club"><?php echo $membre['club']; ?></p>
                     </div>
-                    <div class="crud-btn" style="display: flex;">
+                    <div class="crud-btn" >
                         
                         <form action="./mdfMembre.php" method="get">
                             <input type="hidden" name="id" value="<?php echo $membre['id']; ?>">
@@ -72,25 +81,16 @@
                         </form>
                     </div>
                     
-                    
                 </div>
-                
             </div>
             
         </div>
     <?php endforeach; ?>
     </section>
-        
-        
-        
-    
-        
-        
-        
         <!--/.footer-->
     <footer id="footer" class="footer">
     <div class="copyright">
-        <p>Copyright 2022 <a href="#"> Karim Cherraoui - Imad Eddine ZAOUI </a>YouCode Student. Tous droits reservé</p>
+    <p>Copyright 2022 <a href="https://www.linkedin.com/in/imad-eddine-zaoui-a2ab95246/">Imad Eddine ZAOUI </a>YouCode Students. Tous droits reservés</p>
           </div>                
     </footer>
 </body>

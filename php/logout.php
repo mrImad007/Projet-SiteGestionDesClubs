@@ -4,8 +4,6 @@
     session_destroy();
     if(!isset($_SESSION['user'])){
         header('Location: ./index.php');
-    }
-    else{
-        header('Location: ./gestionMembre.php');
+        echo '<script>alert("You are loged out.")</script>';
     }
 ?>

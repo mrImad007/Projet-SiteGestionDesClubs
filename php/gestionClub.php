@@ -1,7 +1,8 @@
 <?php
-  include('./isLoged.php');
   include('./logIn.php');
+  include('./isLoged.php');
 ?>
+
 <?php
 $pdo = new PDO("mysql:host=localhost;port=3306;dbname=brief2", 'root','');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -39,7 +40,7 @@ $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
       <a class="menb" href="gestionMembre.php">Membres</a>
       <!-- ---------- logout -------------- -->
       <!-- <div class="logout-btn"> -->
-      <a href="./logOut.php">
+      <a href="./logout.php">
         <button class="btnlog" type="submit">Déconnecter</button>
       </a>
       <!-- </div> -->
@@ -58,7 +59,7 @@ $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
       <button>Ajouter Club</button>
     </a>
   </div><br><br>
-  <section>
+  <div class="section">
     <?php foreach ($clubs as $club) : ?>
       <!-- club 1 -->
       <div class="club">
@@ -81,12 +82,12 @@ $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
       </div>
       <br /><br />
     <?php endforeach; ?>
-  </section>
+  </div>
 
   <!--/.footer-->
   <footer id="footer" class="footer">
     <div class="copyright">
-      <p>Copyright 2022 <a href="#"> Karim Cherraoui - Imad Eddine ZAOUI </a>YouCode Student. Tous droits reservé</p>
+    <p>Copyright 2022 <a href="https://www.linkedin.com/in/imad-eddine-zaoui-a2ab95246/">Imad Eddine ZAOUI </a>YouCode Students. Tous droits reservés</p>
     </div>
   </footer>
 </body>

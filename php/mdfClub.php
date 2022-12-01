@@ -1,6 +1,11 @@
+<?php
+    session_start();
+    include('./isLoged.php');
+?>
 <?php 
-  $pdo = new PDO("mysql:host=localhost;port=3306;dbname=brief2", 'root','');
-  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $pdo = new PDO("mysql:host=localhost;port=3306;dbname=brief2", 'root','');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $id = $_GET['id'];
 
@@ -13,7 +18,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -36,10 +41,12 @@
         </div>
         <div class="menu">
             <a href="gestionClub.php">Clubs</a>
-            <a class="menb" href="membreGestion.php">Membres</a>
+            <a class="menb" href="gestionMembre.php">Membres</a>
             <!-- ---------- logout -------------- -->
             <!-- <div class="logout-btn"> -->
-            <button class="btnlog" action="#" method="POST" type="submit">déconnecter</button>
+            <a href="./logOut.php">
+                <button class="btnlog" type="submit">Déconnecter</button>
+            </a>
             <!-- </div> -->
         </div>
 
@@ -64,10 +71,11 @@
 </section>
 
 <?php
-                  $pdo = new PDO("mysql:host=localhost;port=3306;dbname=brief2", 'root','');
-                  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $pdo = new PDO("mysql:host=localhost;port=3306;dbname=brief2", 'root','');
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                if(isset($_POST['clubName'])){
+            if(isset($_POST['clubName'])){
+
                 $name = $_POST['clubName'];
                 $desc = $_POST['clubDesc'];
                 $mission = $_POST['clubMiss'];
@@ -75,15 +83,15 @@
                 $catgr = $_POST['clubCatg'];
 
                 $updt= "UPDATE `clubs`
-                 SET `Name` = '$name', `Description` = '$desc' , `Mission` = '$mission' , `image` = '$img' , `categorie` = '$catgr'  
-                 WHERE id = '$id';";
+                    SET `Name` = '$name', `Description` = '$desc' , `Mission` = '$mission' , `image` = '$img' , `categorie` = '$catgr'  
+                    WHERE id = '$id';";
 
                 $exe = $pdo->prepare($updt);
                 $exe->execute();
 
                 header('Location: ./gestionClub.php');
-                }
-            ?>
+            }
+?>
 
 
     <!--/.footer-->

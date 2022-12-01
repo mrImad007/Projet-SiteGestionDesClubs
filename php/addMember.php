@@ -13,7 +13,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:ital@1&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/addclub-style.css" />
-    <title>Ajouter des clubs</title>
+    <title>Ajouter des membres</title>
 </head>
 
 <body>
@@ -41,15 +41,15 @@
     <!-- end navigation -->
 <section>
 
-    <h2>Ajouter Club</h2>
+    <h2>Ajouter un Membre</h2>
     
     <div class="forms" action="<?php echo $_SERVER['PHP_SELF'] ?> " method="post">
         <form method="post">
-            <input type="text" name="clubName" placeholder="Nom du club"><br><br>
-            <input type="text" name="clubMiss" placeholder="mission"><br><br>
+            <input type="text" name="memberName" placeholder="Nom du membre"><br><br>
             <input type="text" id="img" name="img" placeholder="image URL"><br><br>
-            <input type="text" name="clubCatg" placeholder="category"><br><br>
-            <textarea type="text" name="clubDesc" placeholder="description"></textarea><br><br>
+            <input type="text" name="membreAge" placeholder="Age"><br><br>
+            <input type="text" name="membreClass" placeholder="Class"><br><br>
+            <textarea type="text" name="membreClub" placeholder="Club"></textarea><br><br>
             <button>Ajouter</button>
         </form>
     </div>
@@ -61,14 +61,14 @@
 $pdo = new PDO("mysql:host=localhost;port=3306;dbname=brief2", 'root','');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-if(isset($_POST['clubName'])){
-$name = $_POST['clubName'];
-$desc = $_POST['clubDesc'];
-$mission = $_POST['clubMiss'];
-$category = $_POST['clubCatg'];
+if(isset($_POST['memberName'])){
+$name = $_POST['memberName'];
+$age = $_POST['membreAge'];
+$class = $_POST['membreClass'];
+$club = $_POST['membreCLub'];
 $img = $_POST['img'];
 
-$ins = "INSERT INTO `clubs` (`Name`, `Description`, `Mission`, `image`, `categorie`) VALUES ('$name','$desc','$mission','$img','$category')";
+$ins = "INSERT INTO `membres` (`Name`, `image`, `class`, `age`, `club`) VALUES ('$name','$img','$class','$age','$club')";
 $exe = $pdo->prepare($ins);
 $exe->execute();
 
@@ -86,5 +86,3 @@ header('Location: ./gestionClub.php');
 </body>
 
 </html>
-
-

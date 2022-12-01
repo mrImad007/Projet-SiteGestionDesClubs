@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include('./isLoged.php');
+?>
+
 <?php 
   $pdo = new PDO("mysql:host=localhost;port=3306;dbname=brief2", 'root','');
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -39,7 +44,9 @@
             <a class="menb" href="gestionMembre.php">Membres</a>
             <!-- ---------- logout -------------- -->
             <!-- <div class="logout-btn"> -->
-            <button class="btnlog" action="#" method="POST" type="submit">déconnecter</button>
+            <a href="./logOut.php">
+                <button class="btnlog" type="submit">Déconnecter</button>
+            </a>
             <!-- </div> -->
         </div>
 
