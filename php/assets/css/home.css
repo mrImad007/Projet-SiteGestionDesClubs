@@ -46,7 +46,7 @@ body.background{
     cursor: pointer;
 }
 .menu{
-    width: 210px;
+    width: 320px;
 }
 .menu :hover{
     color: rgb(65, 166, 255);
@@ -58,9 +58,14 @@ body.background{
     padding-left: 8%;
     text-decoration: none;
 }
-.menu i{
-    font-size: x-large;
-    padding-left: 8%;
+.btnlog{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(47, 113, 254);
+    border: none;
+    border-radius: 2px;
+    margin-left: 20px;
+    padding: 7px 15px;
 }
 .logo img{
     margin-left: 30px;

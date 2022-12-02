@@ -36,8 +36,7 @@ $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
             <div class="menu">
                 <a href="gestionClub.php">Clubs</a>
                 <a class="menb" href="gestionMembre.php">Membres</a>
-                <!-- <a href="index.html">Home</a> -->
-                <i class="uil uil-signin"></i>
+                <button class="btnlog" type = "submit" >Se connecter</button>
             </div>
         </div>
 
