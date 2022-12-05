@@ -1,15 +1,18 @@
 *{
     font-family: sans-serif;
 }
-
-body{
-
-    margin: 0px;  
-    
-    background-image: url("https://scontent.fcmn1-2.fna.fbcdn.net/v/t39.30808-6/308943555_209130704802505_2484629517799509470_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=rQAuHacI6egAX_GKl60&_nc_ht=scontent.fcmn1-2.fna&oh=00_AfC4NSJt02NWf4KJ9zvYE2csBICO9BUpLSz-Qtg6_kZKjA&oe=63811EC3");
+::-webkit-scrollbar{
+    display: none;
 }
-
-
+body{
+    background-image:url('../ycdd.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;  
+}
+body image{
+    opacity: 60%;
+}
 .nav{
     display: flex;
     justify-content: space-between;

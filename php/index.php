@@ -39,7 +39,7 @@ $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
                 <button class="btnlog" type = "submit" >Se connecter</button>
             </div>
         </div>
-
+        <!-- end navigation -->
         <form class="sign-box" action="./gestionClub.php" method="post">
             <div class="signinform">
                 <h3>Sign in</h3>
@@ -100,6 +100,7 @@ $clubs = $sh->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>
     </section>
+
     <!--/.footer-->
     <footer id="footer" class="footer">
         <div class="copyright">

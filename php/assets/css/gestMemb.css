@@ -4,6 +4,9 @@
     padding: 0;
 
 }
+::-webkit-scrollbar{
+    display: none;
+}
 /* start nav */
 .nav{
     display: flex;

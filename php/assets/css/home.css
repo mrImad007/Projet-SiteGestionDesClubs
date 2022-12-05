@@ -3,8 +3,12 @@
     font-family:sans-serif;
     overflow-x: hidden;
 }
-::-webkit-scrollbar{display: none;}
-
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    margin: 0px;
+}
 
 ul{
     transform: translateY(-10px);
@@ -12,24 +16,15 @@ ul{
     margin-bottom: 5PX;
     width: 80%;
     padding: 10px 10px;
-    box-shadow: #888 2px 2px 4px 2px;
+    box-shadow: black 2px 2px 4px 2px;
     border-radius: 10px;
 }
-
 li{
     margin: auto;
     width: 80%;
     list-style: none;
 }
 /* start nav */
-body{
-    
-    margin: 0px;
-    /* background-image: url('../background.jpg');   */
-}
-body.background{
-    opacity: 60%;
-}
 .nav{
     display: flex;
     justify-content: space-between;
@@ -39,24 +34,32 @@ body.background{
     box-shadow: 10px 5px 10px rgb(0,0,0,0.3);
     border-radius: 5px;
 }
-.uil {
-    margin-right: 10px;
-    color: white;
-
-    cursor: pointer;
-}
 .menu{
-    width: 320px;
-}
-.menu :hover{
-    color: rgb(65, 166, 255);
-    animation-delay: 1s;
+    width: 30%;
+    text-align: center;
 }
 .menu a{
+    /* margin-right: 10px; */
+    
     color: white;
     font-family: sans-serif;
     padding-left: 8%;
     text-decoration: none;
+}
+.menu .menb{
+    margin-right: 20px;
+}
+.menu a:hover{
+    color: rgb(65, 166, 255);
+    animation-delay: 1s;
+}
+.menu i{
+    font-size: xx-large;
+}
+.logo img{
+    margin-left: 30px;
+    width: 150px;
+    height: 50px;
 }
 .btnlog{
     cursor: pointer;
@@ -76,7 +79,6 @@ body.background{
 
     position: fixed;
     align-items: center;
-    top: 12.7%;
     width: 20%;
     right:-200%;
     height: 250px;
@@ -93,19 +95,16 @@ body.background{
     text-align: center;
 
 }
-
 .signinform p {
     font-size: 70%;
     line-height: 20px;
 }
-
 .signinform input{
     margin-top: 20px;
 }
 .signinform button{
     margin-top: 20px;
 }
-
 .signinform .connect{
     background-color: #2f5efa;
     color: white;
@@ -115,13 +114,9 @@ body.background{
     cursor: pointer;
 }
 .text{
-    /* display: flex; */
-    /* justify-content: center; */
-    
     max-width: 80%;
     margin-left: 10%;
 }
-
 /* end navi */
 .contenu{
     text-align: center;
@@ -133,23 +128,18 @@ h1, h3{
 }
 
 .cont{
-    
+    background-color: rgba(245, 245, 245, 0.717);
     width: 350px;
-    box-shadow: 10px 10px 5px 5px #888;
+    box-shadow: 10px 10px 5px 5px black;
     padding: 5px;
     border-radius: 5px;
     height: 400px;
     overflow:scroll;
     margin-left: 3%;
-    border: solid rgb(217, 215, 215);
+    border: solid black;
     margin-bottom: 20px;
 
 }
-/* .club{
-    flex: 1;
-    padding-left: 10px; 
-} */
-
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
@@ -159,8 +149,7 @@ h1, h3{
 }
 .club p{
     transform: translateY(-10px);
-    margin: 0;
-    box-shadow: #888 2px 2px 4px 2px;
+    box-shadow: black 2px 2px 4px 2px;
     border-radius: 10px;
     opacity: 0.8;
     text-align: center;
@@ -175,7 +164,6 @@ h1, h3{
     margin: auto;
     margin-top: 10px;
 } 
-
 /* footer */
 .footer{
     border-radius: 5px;
@@ -198,3 +186,4 @@ h1, h3{
     margin-top: 10px;
     margin-left: 30px;
   }
+  /* end footer */
